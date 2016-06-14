@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 #Use Postgresql as the database for Heroku
 gem 'pg'
+gem 'devise'
+gem 'milia'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,3 +50,6 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'recaptcha', require: 'recaptcha/rails'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
