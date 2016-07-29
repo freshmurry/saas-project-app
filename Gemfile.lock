@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/dsaronin/milia.git
+  revision: ab1098d5213113804ccdb2c1b7ac298522c0212b
+  specs:
+    milia (1.2.0)
+      devise (~> 3.4)
+      rails (~> 4.2)
+
+GIT
   remote: git://github.com/rails/activerecord-session_store.git
   revision: 39e9fb5f8355e6e062ff80850a4939312c8ac28a
   specs:
@@ -95,9 +103,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    milia (1.2.0)
-      devise (~> 3.4)
-      rails (~> 4.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -198,7 +203,7 @@ DEPENDENCIES
   devise-bootstrap-views
   jbuilder (~> 2.0)
   jquery-rails
-  milia
+  milia!
   pg
   rails (= 4.2.5)
   rails_12factor

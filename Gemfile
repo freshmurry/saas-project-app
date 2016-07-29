@@ -5,7 +5,7 @@ gem 'rails', '4.2.5'
 #Use Postgresql as the database for Heroku
 gem 'pg'
 gem 'devise'
-gem 'milia'
+gem 'milia', github: 'dsaronin/milia'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
