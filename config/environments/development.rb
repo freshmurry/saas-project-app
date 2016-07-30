@@ -28,7 +28,10 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
   config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { :host => 'http://completerubyonrailscourse.ide.c9.io:3000'}
+  config.action_mailer.default_url_options = { :host => 'https://completerubyonrailscourse-freshmurry-2.c9users.io'}
+  # If this host dosn't work, try this next:
+  # https://completerubyonrailscourse-freshmurry-2.c9users.io/?_c9_id=livepreview2&_c9_host=https://ide.c9.io
+  
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false

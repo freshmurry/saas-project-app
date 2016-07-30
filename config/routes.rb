@@ -18,5 +18,4 @@ Rails.application.routes.draw do
     :passwords => "milia/passwords", 
   }
 
-
 end

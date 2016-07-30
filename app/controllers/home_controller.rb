@@ -3,14 +3,14 @@ class HomeController < ApplicationController
 
   def index
     if current_user
-      if session[:tenent_id]
-        Tenent.set_current_tenent session[:tenent_id]
+      if session[:tenant_id]
+        Tenant.set_current_tenant session[:tenant_id]
       else
-        Tenent.set_current_tenent current_user.tenents_first
+        Tenant.set_current_tenant current_user.tenants_first
       end
       
-      @tenent = Tenent.current_tenent
-      params[:tenent_id] = @tenent.id
+      @tenant = Tenant.current_tenant
+      params[:tenant_id] = @tenant.id
     end
   end
 end
