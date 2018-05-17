@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Artifects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Key</th>
+      <th>Project</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artifects.each do |artifect| %>
+      <tr>
+        <td><%= artifect.name %></td>
+        <td><%= artifect.key %></td>
+        <td><%= artifect.project %></td>
+        <td><%= link_to 'Show', artifect %></td>
+        <td><%= link_to 'Edit', edit_artifect_path(artifect) %></td>
+        <td><%= link_to 'Destroy', artifect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artifect', new_artifect_path %>

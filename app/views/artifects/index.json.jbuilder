@@ -1,0 +1,1 @@
+json.array! @artifects, partial: 'artifects/artifect', as: :artifect

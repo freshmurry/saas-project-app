@@ -1,0 +1,2 @@
+module ArtifectsHelper
+end
