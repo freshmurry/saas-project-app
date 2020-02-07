@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title><%= content_for?(:title) ? yield(:title) : "ProjectQue | The Project Management Que" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Document Management Solution | " %></title>
     <%= csrf_meta_tags %>
 
+    <meta name="description" content="A Document Management System that your organization can trust. Engage with both internal and external customers to manage important documents. Document delivery has never been easier. Types: RFP, RFI, RFQ, Contracts, SSA, NDA, FOIA Request, etc.">
+    <meta name="keyword" content="Document, Document Management, Document Management System">
+      
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
   
     <%= stylesheet_link_tag "application", :media => "all" %>
+    
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -41,55 +46,52 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">ProjectQue</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <% if current_user %>
-            <li>
-            <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe,
-                          new_member_path,
-                          class: 'navbar-link btn btn-primary' %>
-            </li>
-            <% end %>
-          </ul>
-          <ul class="nav navbar-right col-md-4">
-            <% if current_user %>
-            <li class="col-md-8 user-name">
-            <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
-            </li>
-            <li class="col-md-1"> </li>
-            <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-danger btn-xs', title: 'Logout', :method => :delete) %></li>
-            <% else %>
-            <li class="col-md-4 pull-right">
-            <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
-            </li>
-            <% end %>
-          </ul>
-        </div>
+        <%= link_to "ProDocs", root_path, class: "navbar-brand" %>
       </div>
-    </div>
-    
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+        
+          <% if current_user %>
+         
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.email %> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Add Members", new_member_path %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+            </ul>  
+          </li>
+            
+          <% else %>
+           <li><%= link_to "Log In", new_user_session_path %></li>
+          <% end %>
+            
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-  
-      </div><!--/row-->
-      <br>
-      <footer>
-        <p>&copy; Lawrence Murry 2016</p>
-      </footer>
-
-    </div> <!-- /container -->
+      </div>
+    </div>  
 
   </body>
 </html>

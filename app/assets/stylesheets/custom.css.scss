@@ -1,4 +1,5 @@
-// application styling
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
 .user-name {
   padding: 0 !important ;
   padding-left: 5px;
@@ -16,6 +17,19 @@ a:hover, a:focus {
   }
 }
 
+.navbar {
+  position: relative;
+  min-height: 45px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+
+.navbar-brand {
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
 .nav.navbar-right {
   padding-bottom: 10px;
   padding-top: 5px;
@@ -31,7 +45,7 @@ a:hover, a:focus {
   }
 
   .navbar-link:focus, .navbar-link:hover {
-    background: #3071a9;
+    background: #34495E;
     color: #fff;
   }
   
@@ -60,34 +74,16 @@ a:hover, a:focus {
   color: #fff;
 }
 
+.btn-success:visited, .btn-danger:visited {
+  color: #fff;
+}
+
 // index homepage styling
 .features {
 
 ul {
   margin-left: 0;
   padding-left: 15px;
-  }
-}
-
-.jumbotron {
-  background-image: asset-url('background.png');
-  background-size: cover;
-  color: #ecf0f1;
-  font-family: 'Helvetica' !important;
-  font-stretch: expanded;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
-  text-align: center;
-  height: 100vh;
-  
-  h2 {
-    font-size: 35px !important;
-  
-  .lead {
-      font-family: 'Helvetica' !important;
-      font-size: 30px !important;
-    }
   }
 }
 

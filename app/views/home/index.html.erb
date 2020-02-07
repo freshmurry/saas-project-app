@@ -3,10 +3,10 @@
 <h3 class="pull-right">Organization: <%= @tenant.name %></h3>
 <%= render 'projects/list' %>
   <% else %>
-  <div class="jumbotron">
-    <h1>Welcome to the Project Management Application!</h1>
-      <p class="lead">You'll love managing your projects with our SaaS application. Please take a look at our great plans.</p>
-  </div>
+
+    <h1 class="text-center">RFx Manangement System</h1>
+    <p class="lead text-center">Manage vendor response projects effeciently in the cloud.</p>
+
   
   <div class="row">
     <div class="plans clearfix">
@@ -23,23 +23,23 @@
               </ul>
             </div>
               <p>
-              <%= link_to 'Sign Up', new_user_registration_path(plan: 'free'), class: 'btn btn-primary sign-up' %>
+              <%= link_to 'Sign Up', new_user_registration_path(plan: 'free'), class: 'btn btn-success sign-up' %>
               </p>
       </div>
           
       <div class="col-lg-3 plan">
         <h2>Premium Plan</h2>
-        <div class="price pull-right">Price: $10</div>
+        <div class="price pull-right">Price: $197</div>
           <div class="features">
             <ul>
               <li>Unlimited file uploads</li>
               <li>Responsive design</li>
               <li>Access anywhere</li>
-              <li class='extra'>Unlimited projects</li>
+              <li class="extra"><b>Unlimited projects</b></li>
             </ul>
           </div>
           <p>
-          <%= link_to 'Sign Up', new_user_registration_path(plan: 'premium'), class: 'btn btn-primary sign-up' %>
+          <%= link_to 'Sign Up', new_user_registration_path(plan: 'premium'), class: 'btn btn-success sign-up' %>
           </p>
       </div>
     </div>

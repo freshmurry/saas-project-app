@@ -1,5 +1,15 @@
 Rails.application.configure do
-   
+  config.paperclip_defaults = {
+    :storage => :s3,
+    s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com",
+    :s3_credentials => {
+      :bucket => ENV['AWS_S3_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+      :s3_region => ENV['AWS_REGION']
+    }
+  }
+  
   # devise says to define default url
   config.action_mailer.default_url_options = { :host => 'murry-saas-app.herokuapp.com', :protocol => 'https' }
 

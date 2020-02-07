@@ -1,1 +1,0 @@
-json.partial! "artifects/artifect", artifect: @artifect
