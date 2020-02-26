@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'sqlite3', '~> 1.3.13'
-# gem 'pg'
 gem 'devise'
 gem 'milia'
 gem 'aws-sdk'
