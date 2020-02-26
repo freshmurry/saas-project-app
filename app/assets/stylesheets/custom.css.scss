@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-=======
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 .user-name {
   padding: 0 !important ;
   padding-left: 5px;
   padding-top: 15px !important;
   text-align: center;
 
-<<<<<<< HEAD
   a {
       color: #fff !important;
       margin: 0 !important;
@@ -36,76 +31,20 @@
     background: #3071a9;
     color: #fff;
   }
-=======
-a {
-  color: #fff !important;
-  margin: 0 !important;
-  padding: 5px!important;
-  }
-
-a:hover, a:focus {
-  color: #000 !important;
-  }
-}
-
-.navbar {
-  position: relative;
-  min-height: 45px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-}
-
-
-.navbar-brand {
-	font-weight: bold;
-	font-size: 1.3em;
-}
-
-.nav.navbar-right {
-  padding-bottom: 10px;
-  padding-top: 5px;
-  }
-
-.nav.navbar-nav {
-
-  .navbar-link {
-  border-radius: 5px;
-  color: #fff;
-  margin-top: 15px;
-  padding: 8px;
-  }
-
-  .navbar-link:focus, .navbar-link:hover {
-    background: #34495E;
-    color: #fff;
-  }
-  
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   li a {
     margin-right: 5px;
   }
 }
 
 .nav.navbar-right li {
-<<<<<<< HEAD
-=======
 
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   .btn {
     color: #fff !important;
     margin-top: 5%;
   }
-<<<<<<< HEAD
   .btn-danger:hover, .btn-danger:focus {
     background-color: darken(#d9534f,20%) !important;
   }
-=======
-  
-  .btn-danger:hover, .btn-danger:focus {
-    background-color: darken(#d9534f,20%) !important;
-  }
-  
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   .btn-primary:hover, .btn-primary:focus {
     background-color: darken(#428bca,20%) !important;
   }
@@ -115,7 +54,6 @@ a:hover, a:focus {
   color: #fff;
 }
 
-<<<<<<< HEAD
 .features {
   ul {
     margin-left: 0;
@@ -141,18 +79,6 @@ a:hover, a:focus {
       font-family: 'Helvetica Neue' !important;
       font-size: 30px !important;
     }
-=======
-.btn-success:visited, .btn-danger:visited {
-  color: #fff;
-}
-
-// index homepage styling
-.features {
-
-ul {
-  margin-left: 0;
-  padding-left: 15px;
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   }
 }
 
@@ -175,7 +101,6 @@ ul {
   color: #5cb85c;
 }
 
-<<<<<<< HEAD
 .no-side-padding {
   padding-left: 0;
   padding-right: 0;
@@ -214,31 +139,4 @@ ul {
   background: #000;
   color: #fff !important;
   padding-bottom: 5px;
-=======
-// ConfirmationsController
-
-.no-side-padding {
-padding-left: 0;
-padding-right: 0;
-}
-
-.no-left-padding {
-padding-left: 0 !important;
-}
-
-.no-right-padding {
-padding-right: 0 !important;
-}
-
-// Project List
-
-.table tr td {
-  a.main-link {
-  color: #428bca;
-  }
-
-  a.main-link:hover {
-  background: none;
-  }
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 }

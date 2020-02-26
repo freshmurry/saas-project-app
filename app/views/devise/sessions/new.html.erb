@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <div class="panel panel-default">
-=======
-<div class="panel panel-default devise-bs">
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   <div class="panel-heading">
     <h4><%= t('.sign_in', :default => "Sign in") %></h4>
   </div>
@@ -18,20 +14,12 @@
       </div>
       <% if devise_mapping.rememberable? %>
         <div class="checkbox">
-<<<<<<< HEAD
           <label>
             <%= f.check_box :remember_me %>
             <%= f.label :remember_me %>
           </label>
         </div>
         <% end %>
-=======
-          <%= f.label :remember_me do %>
-            <%= f.check_box :remember_me %>Remember Me
-          <% end %>
-        </div>
-      <% end %>
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
       <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
     <% end %>
   </div>

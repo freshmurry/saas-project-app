@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title><%= content_for?(:title) ? yield(:title) : "SaasProjectApp" %></title>
     <%= csrf_meta_tags %>
 
@@ -14,20 +13,6 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
-=======
-    
-    <title><%= content_for?(:title) ? yield(:title) : "Document Management Solution | " %></title>
-    <%= csrf_meta_tags %>
-
-    <meta name="description" content="A Document Management System that your organization can trust. Engage with both internal and external customers to manage important documents. Document delivery has never been easier. Types: RFP, RFI, RFQ, Contracts, SSA, NDA, FOIA Request, etc.">
-    <meta name="keyword" content="Document, Document Management, Document Management System">
-      
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -48,70 +33,18 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
-<<<<<<< HEAD
     <%= javascript_include_tag "https://js.stripe.com/v2/" %>
     <%= javascript_include_tag "application" %>
   </head>
   <body>
 
     <%= render 'common/navbar' %>
-=======
-
-    <%= javascript_include_tag "application" %>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
-    <![endif]-->
-  </head>
-  <body>
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to "ProDocs", root_path, class: "navbar-brand" %>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-        
-          <% if current_user %>
-         
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <%= current_user.email %> <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Add Members", new_member_path %></li>
-              <li role="separator" class="divider"></li>
-              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-            </ul>  
-          </li>
-            
-          <% else %>
-           <li><%= link_to "Log In", new_user_session_path %></li>
-          <% end %>
-            
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-  </nav>
-
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-<<<<<<< HEAD
       </div><!--/row-->
 
       <footer>
@@ -119,10 +52,6 @@
       </footer>
 
     </div> <!-- /container -->
-=======
-      </div>
-    </div>  
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 
   </body>
 </html>

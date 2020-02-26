@@ -1,5 +1,4 @@
 <% if current_user %>
-<<<<<<< HEAD
 <h3 class="pull-right">Organization: <%= @tenant.name %></h3>
 <%= render 'projects/list' %>
 <% else %>
@@ -48,51 +47,3 @@
   </div>
 </div>
 <% end %>
-=======
-
-<h3 class="pull-right">Organization: <%= @tenant.name %></h3>
-<%= render 'projects/list' %>
-  <% else %>
-
-    <h1 class="text-center">RFx Manangement System</h1>
-    <p class="lead text-center">Manage vendor response projects effeciently in the cloud.</p>
-
-  
-  <div class="row">
-    <div class="plans clearfix">
-      <div class="col-lg-3 col-lg-offset-3 plan">
-        <h2>Free Plan</h2>
-          <div class="price pull-right">Price: Free
-          </div>
-            <div class="features">
-              <ul>
-                <li>Unlimited file uploads</li>
-                <li>Responsive design</li>
-                <li>Access anywhere</li>
-                <li>1 project</li>
-              </ul>
-            </div>
-              <p>
-              <%= link_to 'Sign Up', new_user_registration_path(plan: 'free'), class: 'btn btn-success sign-up' %>
-              </p>
-      </div>
-          
-      <div class="col-lg-3 plan">
-        <h2>Premium Plan</h2>
-        <div class="price pull-right">Price: $197</div>
-          <div class="features">
-            <ul>
-              <li>Unlimited file uploads</li>
-              <li>Responsive design</li>
-              <li>Access anywhere</li>
-              <li class="extra"><b>Unlimited projects</b></li>
-            </ul>
-          </div>
-          <p>
-          <%= link_to 'Sign Up', new_user_registration_path(plan: 'premium'), class: 'btn btn-success sign-up' %>
-          </p>
-      </div>
-    </div>
-  </div>
-<% end %>
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
