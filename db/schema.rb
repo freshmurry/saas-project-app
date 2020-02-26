@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151117032915) do
-=======
-ActiveRecord::Schema.define(version: 20160804213731) do
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 
   create_table "artifacts", force: :cascade do |t|
     t.string   "name"
@@ -39,7 +35,6 @@ ActiveRecord::Schema.define(version: 20160804213731) do
   add_index "members", ["tenant_id"], name: "index_members_on_tenant_id"
   add_index "members", ["user_id"], name: "index_members_on_user_id"
 
-<<<<<<< HEAD
   create_table "payments", force: :cascade do |t|
     t.string   "email"
     t.string   "token"
@@ -50,8 +45,6 @@ ActiveRecord::Schema.define(version: 20160804213731) do
 
   add_index "payments", ["tenant_id"], name: "index_payments_on_tenant_id"
 
-=======
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "details"
@@ -91,7 +84,6 @@ ActiveRecord::Schema.define(version: 20160804213731) do
 
   add_index "tenants_users", ["tenant_id", "user_id"], name: "index_tenants_users_on_tenant_id_and_user_id"
 
-<<<<<<< HEAD
   create_table "user_projects", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "user_id"
@@ -102,8 +94,6 @@ ActiveRecord::Schema.define(version: 20160804213731) do
   add_index "user_projects", ["project_id"], name: "index_user_projects_on_project_id"
   add_index "user_projects", ["user_id"], name: "index_user_projects_on_user_id"
 
-=======
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   create_table "users", force: :cascade do |t|
     t.string   "email",                        default: "",    null: false
     t.string   "encrypted_password",           default: "",    null: false
@@ -123,10 +113,7 @@ ActiveRecord::Schema.define(version: 20160804213731) do
     t.integer  "tenant_id"
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
-<<<<<<< HEAD
     t.boolean  "is_admin",                     default: false
-=======
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
