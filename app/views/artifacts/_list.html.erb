@@ -5,6 +5,11 @@
     <tr>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:key) %></th>
+<<<<<<< HEAD
+=======
+      <th><%= model_class.human_attribute_name(:project_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -13,7 +18,14 @@
       <tr>
         <td><%= link_to artifact.name, artifact_path(artifact), class: 'main-link' %></td>
         <td><%= s3_link Tenant.current_tenant_id, artifact.key %></td>
+<<<<<<< HEAD
         <td>
+=======
+        <td><%= artifact.project_id %></td>
+        <td><%= artifact.created_at %></td>
+        <td>
+
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       artifact_path(artifact),
                       :method => :delete,

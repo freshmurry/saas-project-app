@@ -1,7 +1,23 @@
 Rails.application.configure do
+<<<<<<< HEAD
    
   # devise says to define default url
   config.action_mailer.default_url_options = { :host => 'secure.simple-milia-app.com', :protocol => 'https' }
+=======
+  config.paperclip_defaults = {
+    :storage => :s3,
+    s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com",
+    :s3_credentials => {
+      :bucket => ENV['AWS_S3_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+      :s3_region => ENV['AWS_REGION']
+    }
+  }
+  
+  # devise says to define default url
+  config.action_mailer.default_url_options = { :host => 'murry-saas-app.herokuapp.com', :protocol => 'https' }
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 
   ActionMailer::Base.delivery_method = :smtp
 
@@ -24,7 +40,10 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+<<<<<<< HEAD
   
+=======
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => 'murry-saas-app.herokuapp.com', :protocol => 'https'}
 

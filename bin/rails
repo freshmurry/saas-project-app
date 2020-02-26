@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
+<<<<<<< HEAD
+=======
+begin
+  load File.expand_path('../spring', __FILE__)
+rescue LoadError => e
+  raise unless e.message.include?('spring')
+end
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 APP_PATH = File.expand_path('../../config/application', __FILE__)
 require_relative '../config/boot'
 require 'rails/commands'

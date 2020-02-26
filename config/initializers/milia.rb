@@ -46,6 +46,10 @@ Milia.setup do |config|
   # allows an app to expand the permitted attribute list
   # specify each attribute as a symbol
   # example: [:coupon]
+<<<<<<< HEAD
   # config.whitelist_coupon_params = []
 
+=======
+  # config.whitelist_coupon_params = [:plan]
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 end

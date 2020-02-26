@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+<<<<<<< HEAD
   before_action :set_project, only: [:show, :edit, :update, :destroy, :users, :add_user]
   before_action :set_tenant, only: [:show, :edit, :update, :destroy, :new, :create, :users, :add_user]
   before_action :verify_tenant
@@ -7,6 +8,16 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.by_user_plan_and_tenant(params[:tenant_id], current_user)
+=======
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_tenant, only: [:show, :edit, :update, :destroy, :new, :create]
+  before_action :verify_tenant
+  
+  # GET /projects
+  # GET /projects.json
+  def index
+    @projects = Project.all
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   end
 
   # GET /projects/1
@@ -27,7 +38,11 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+<<<<<<< HEAD
     @project.users << current_user
+=======
+
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
     respond_to do |format|
       if @project.save
         format.html { redirect_to root_url, notice: 'Project was successfully created.' }
@@ -58,6 +73,7 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+<<<<<<< HEAD
   
   def users
     @project_users = (@project.users + (User.where(tenant_id: @tenant.id, is_admin: true))) - [current_user]
@@ -77,6 +93,8 @@ class ProjectsController < ApplicationController
       end
     end
   end
+=======
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -88,6 +106,7 @@ class ProjectsController < ApplicationController
     def project_params
       params.require(:project).permit(:title, :details, :expected_completion_date, :tenant_id)
     end
+<<<<<<< HEAD
   
     def set_tenant
       @tenant = Tenant.find(params[:tenant_id])
@@ -97,6 +116,17 @@ class ProjectsController < ApplicationController
       unless params[:tenant_id] == Tenant.current_tenant_id.to_s
         redirect_to :root, 
               flash: { error: 'You are not authorized to access any organization other than your own'}
+=======
+    
+    def set_tenant
+      @tenant = Tenant.find(params[:tenant_id])
+    end
+    
+    def verify_tenant
+      unless params[:tenant_id] == Tenant.current_tenant_id.to_s
+        redirect_to :root, 
+              flash: {error: 'You are not authorized to access any organization other than your own'}
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
       end
     end
 end

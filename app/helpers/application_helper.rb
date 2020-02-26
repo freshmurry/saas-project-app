@@ -18,8 +18,13 @@ module ApplicationHelper
         class: "alert fade in alert-#{type} #{tag_class}"
       }.merge(options)
 
+<<<<<<< HEAD
       close_button = content_tag(:button, raw("&times;"), type: "button", class: "close", 
         "data-dismiss" => "alert")
+=======
+      close_button = content_tag(:button, raw("&times;"), type: "button", class: "close",
+      "data-dismiss" => "alert")
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
 
       Array(message).each do |msg|
         text = content_tag(:div, close_button + msg, tag_options)
@@ -28,6 +33,7 @@ module ApplicationHelper
     end
     flash_messages.join("\n").html_safe
   end
+<<<<<<< HEAD
   
   def tenant_name(tenant_id)
     Tenant.find(tenant_id).name
@@ -42,3 +48,14 @@ module ApplicationHelper
     ""
   end
 end
+=======
+end
+
+def tenant_name(tenant_id)
+  Tenant.find(tenant_id).name
+end
+
+def s3_link(tenant_id, artifact_key)
+  link_to artifact_key, "#{artifact_key}", class: "main-link", target: 'new'
+end
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198

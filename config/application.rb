@@ -6,7 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+<<<<<<< HEAD
 module SaasProjectApp
+=======
+module SassProjectApp
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   class Application < Rails::Application
      
     # uncomment to ensure a common layout for devise forms
