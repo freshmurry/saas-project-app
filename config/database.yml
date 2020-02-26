@@ -22,8 +22,4 @@ test:
 
 production:
   <<: *default
-<<<<<<< HEAD
   database: db/production.sqlite3
-=======
-  database: db/production.sqlite3
->>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
