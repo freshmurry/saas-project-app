@@ -5,7 +5,7 @@
 <%= bootstrap_devise_error_messages! %>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4><%= t('.sign_up', :default => "Sign up") %></h4>
+    <h4><%= t('.sign_up', :default => "Sign Up") %></h4>
   </div>
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form", class: 'cc_form' }) do |f| %>
@@ -66,7 +66,7 @@
           </div>
         <% end %>
       <% end %>
-      <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+      <%= f.submit t('.sign_up', :default => "Sign Up"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
