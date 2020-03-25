@@ -5,7 +5,6 @@
     <tr>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:key) %></th>
-
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -13,7 +12,6 @@
     <% artifacts.each do |artifact| %>
       <tr>
         <td><%= link_to artifact.name, artifact_path(artifact), class: 'main-link' %></td>
-        <td><%= s3_link Tenant.current_tenant_id, artifact.key %></td>
         <td>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       artifact_path(artifact),
