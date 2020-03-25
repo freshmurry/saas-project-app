@@ -1,6 +1,4 @@
 class Artifact < ActiveRecord::Base
-  require 'aws-sdk-s3'
-  
   before_save :upload_to_s3
   attr_accessor :upload
   belongs_to :project
