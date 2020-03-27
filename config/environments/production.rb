@@ -103,5 +103,4 @@ Rails.application.configure do
     :password       => ENV['SENDGRID_PASSWORD'],
     :domain         => 'heroku.com'
   }
-
 end
