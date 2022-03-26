@@ -16,10 +16,15 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer  :sign_in_count, default: 0, null: false
       t.datetime :current_sign_in_at
       t.datetime :last_sign_in_at
+<<<<<<< HEAD
       t.string   "current_sign_in_ip"
       t.string   "last_sign_in_ip"
       # t.inet     :current_sign_in_ip
       # t.inet     :last_sign_in_ip
+=======
+      t.string     :current_sign_in_ip
+      t.string     :last_sign_in_ip
+>>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
 
       ## Confirmable
       t.string   :confirmation_token

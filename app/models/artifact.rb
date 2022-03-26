@@ -1,5 +1,4 @@
 class Artifact < ActiveRecord::Base
-  
   before_save :upload_to_s3
   attr_accessor :upload
   belongs_to :project

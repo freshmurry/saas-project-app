@@ -3,11 +3,19 @@
 one:
   title: MyString
   details: MyString
+<<<<<<< HEAD
   expected_completion_date: 2015-11-12
+=======
+  expected_completion_date: 2016-07-30
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   tenant_id: 
 
 two:
   title: MyString
   details: MyString
+<<<<<<< HEAD
   expected_completion_date: 2015-11-12
+=======
+  expected_completion_date: 2016-07-30
+>>>>>>> eff0416e2aa769ee2885a41d4ec1ab475e8c8198
   tenant_id: 
