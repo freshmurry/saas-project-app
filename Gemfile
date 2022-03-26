@@ -3,12 +3,8 @@ source 'https://rubygems.org'
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-<<<<<<< HEAD
 gem 'rails', '5.0.2'
 # Use postgresql as the database for Active Record
-=======
-gem 'rails', '4.2.3'
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
 gem 'devise'
 gem 'milia', '~>1.3'
 gem 'aws-sdk'
