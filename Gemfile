@@ -45,33 +45,17 @@ gem 'capistrano-rails', group: :development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-<<<<<<< HEAD
-  gem 'sqlite3', '~> 1.3.13'
-=======
-end
-
-group :production do
-  gem 'rails_12factor'
-  gem 'pg', '0.21.0'
-end
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   gem 'web-console', '~> 2.0'
   gem 'sqlite3', '~> 1.3.13'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 end
 
-<<<<<<< HEAD
 group :production do
   gem 'rails_12factor'
   gem 'pg', '~> 0.20'
 end
 
 
-=======
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'activerecord-session_store'
