@@ -21,10 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-<<<<<<< HEAD
-  <<: *default
-  database: db/production.sqlite3
-=======
   adapter: postgresql
   database: db/production.postgresql
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35

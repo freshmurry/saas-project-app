@@ -21,11 +21,7 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["project_id"], name: "index_artifacts_on_project_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "artifacts", ["project_id"], name: "index_artifacts_on_project_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
     t.integer  "user_id"
@@ -37,12 +33,7 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["user_id"], name: "index_members_on_user_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "members", ["tenant_id"], name: "index_members_on_tenant_id"
-  add_index "members", ["user_id"], name: "index_members_on_user_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "payments", force: :cascade do |t|
     t.string   "email"
     t.string   "token"
@@ -52,11 +43,7 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["tenant_id"], name: "index_payments_on_tenant_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "payments", ["tenant_id"], name: "index_payments_on_tenant_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "details"
@@ -67,11 +54,7 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["tenant_id"], name: "index_projects_on_tenant_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "projects", ["tenant_id"], name: "index_projects_on_tenant_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -81,12 +64,7 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
-  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "tenants", force: :cascade do |t|
     t.integer  "tenant_id"
     t.string   "name"
@@ -97,23 +75,14 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["tenant_id"], name: "index_tenants_on_tenant_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "tenants", ["name"], name: "index_tenants_on_name"
-  add_index "tenants", ["tenant_id"], name: "index_tenants_on_tenant_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "tenants_users", id: false, force: :cascade do |t|
     t.integer "tenant_id", null: false
     t.integer "user_id",   null: false
     t.index ["tenant_id", "user_id"], name: "index_tenants_users_on_tenant_id_and_user_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "tenants_users", ["tenant_id", "user_id"], name: "index_tenants_users_on_tenant_id_and_user_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "user_projects", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "user_id"
@@ -123,12 +92,7 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["user_id"], name: "index_user_projects_on_user_id"
   end
 
-<<<<<<< HEAD
-=======
-  add_index "user_projects", ["project_id"], name: "index_user_projects_on_project_id"
-  add_index "user_projects", ["user_id"], name: "index_user_projects_on_user_id"
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
   create_table "users", force: :cascade do |t|
     t.string   "email",                        default: "",    null: false
     t.string   "encrypted_password",           default: "",    null: false
@@ -154,11 +118,5 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
-=======
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
->>>>>>> b6c8070b64ccb9d65ff98f0a526d3eea2f935e35
 end

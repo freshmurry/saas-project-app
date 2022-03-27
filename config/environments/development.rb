@@ -1,7 +1,7 @@
 Rails.application.configure do
    
   # devise says to define default url
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'https://659c0c0bbf494430bd3cbb16f4b4fbeb.vfs.cloud9.us-east-1.amazonaws.com' }
 
   # set up for email sending even in dev mode
   # Don't care if the mailer can't send
@@ -29,7 +29,7 @@ Rails.application.configure do
   config.eager_load = false
   
   config.action_mailer.delivery_method = :test 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+  config.action_mailer.default_url_options = { :host => 'https://659c0c0bbf494430bd3cbb16f4b4fbeb.vfs.cloud9.us-east-1.amazonaws.com'}
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
