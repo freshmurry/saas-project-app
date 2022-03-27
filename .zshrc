@@ -1,0 +1,9 @@
+export ZSH=$HOME/.oh-my-zsh-installation
+export SENDGRID_USERNAME=ltmurrn6
+export SENDGRID_PASSWORD=freshmurry
+export STRIPE_TEST_SECRET_KEY=sk_test_xG0WLBUoTBRghSxwuRJBMiaL00L5kd1eKm
+export STRIP_TEST_PUBLISHABLE_KEY=pk_test_1SAliYyw1E7nZfPPx178nPRZ005fn3clc4
+export AWS_ACCESS_KEY=AKIAIN4Z7SDGFT7ZJ5RA
+export AWS_SECRET_ACCESS_KEY=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
+export S3_BUCKET=murry-saas-app
+export AWS_REGION=us-east-1
