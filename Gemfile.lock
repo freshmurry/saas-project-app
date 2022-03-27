@@ -1359,7 +1359,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pg (0.21.0)
+    pg (0.20.0)
     racc (1.6.0)
     rack (2.2.3)
     rack-test (0.6.3)
@@ -1475,7 +1475,7 @@ DEPENDENCIES
   jquery-rails
   json!
   milia
-  pg (~> 0.20)
+  pg (~> 0.20.0)
   rails (= 5.0.2)
   rails_12factor
   recaptcha
