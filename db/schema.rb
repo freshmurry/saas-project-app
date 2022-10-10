@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["project_id"], name: "index_artifacts_on_project_id"
   end
 
-
   create_table "members", force: :cascade do |t|
     t.integer  "tenant_id"
     t.integer  "user_id"
@@ -33,7 +32,6 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["user_id"], name: "index_members_on_user_id"
   end
 
-
   create_table "payments", force: :cascade do |t|
     t.string   "email"
     t.string   "token"
@@ -42,7 +40,6 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.datetime "updated_at", null: false
     t.index ["tenant_id"], name: "index_payments_on_tenant_id"
   end
-
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -54,7 +51,6 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["tenant_id"], name: "index_projects_on_tenant_id"
   end
 
-
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -63,7 +59,6 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
-
 
   create_table "tenants", force: :cascade do |t|
     t.integer  "tenant_id"
@@ -75,13 +70,11 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["tenant_id"], name: "index_tenants_on_tenant_id"
   end
 
-
   create_table "tenants_users", id: false, force: :cascade do |t|
     t.integer "tenant_id", null: false
     t.integer "user_id",   null: false
     t.index ["tenant_id", "user_id"], name: "index_tenants_users_on_tenant_id_and_user_id"
   end
-
 
   create_table "user_projects", force: :cascade do |t|
     t.integer  "project_id"
@@ -91,7 +84,6 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["project_id"], name: "index_user_projects_on_project_id"
     t.index ["user_id"], name: "index_user_projects_on_user_id"
   end
-
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                        default: "",    null: false
@@ -117,6 +109,5 @@ ActiveRecord::Schema.define(version: 20151117032915) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 
 end
